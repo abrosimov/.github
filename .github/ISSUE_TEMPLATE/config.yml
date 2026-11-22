@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Dependency updates
+    url: https://github.com/abrosimov/renovate-config#readme
+    about: Renovate raises dependency updates automatically. See the Dependency Dashboard issue in this repository instead of opening a request.
