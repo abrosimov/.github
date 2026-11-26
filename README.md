@@ -1,18 +1,22 @@
-# repo-template
+# .github
 
-The template new repositories of `abrosimov` are generated from, by
-[gh-repo-settings](https://github.com/abrosimov/gh-repo-settings). In a generated repository,
-replace this file with the project's own README.
+Defaults GitHub applies to every repository of `abrosimov`, private ones included, that has no file
+of the same kind of its own. Repositories do not carry their own copies: one set here keeps the
+policy the same everywhere.
 
-What a generated repository starts with:
+What every repository inherits:
 
-- `renovate.json5` — the shared Renovate preset, pinned to a tag; Renovate moves the tag. The
-  repository's own rules go below `extends`.
-- `.github/workflows/ci.yml` — CI exposing the `required` check the baseline ruleset demands once
-  the repository has the topic `ci-gated`. Add the project's jobs and list each in `required`'s
-  `needs`.
-- `.gitignore` — local state of AI coding agents and other tools, secrets files, OS and IDE files.
-  Language-specific entries are added in the repository.
-- `LICENSE` — Apache-2.0.
+- `.github/ISSUE_TEMPLATE/` — the bug report form; blank issues are open to maintainers only, and
+  dependency requests are pointed to Renovate's Dependency Dashboard.
+- `.github/pull_request_template.md` — the shape of a pull request description.
 
-Changes here reach only repositories generated afterwards.
+What cannot be inherited and lives in each repository instead: `LICENSE` (Apache-2.0, from
+[repo-template](https://github.com/abrosimov/repo-template)), `CODEOWNERS`, labels, `dependabot.yml`
+and the Renovate configuration (the shared preset is
+[renovate-config](https://github.com/abrosimov/renovate-config)).
+
+The defaults do not show in a repository's file list or in its clones. Labels a template sets must
+exist in every repository that uses it; the bug form sets only `bug`, which GitHub creates in every
+new repository.
+
+GitHub reads these defaults only while this repository is public, so nothing private belongs here.

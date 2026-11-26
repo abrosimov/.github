@@ -1,0 +1,55 @@
+name: Bug report
+description: Something behaves differently from what it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not report a security vulnerability here. Use **Security → Report a vulnerability** where the repository offers it.
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: What happens. Quote the exact error message.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What should happen instead, and what that expectation rests on (documentation, a specification, an earlier version).
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: The smallest sequence that shows the problem, ideally commands that can be pasted as they are.
+      placeholder: |
+        1. git checkout <commit>
+        2. task test
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v1.4.2, or a commit SHA
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: macOS 26 arm64, Go 1.27.1
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant output only. It is formatted as a code block automatically.
+      render: text
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Related issues or pull requests, when it started, known workarounds.
